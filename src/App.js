@@ -7,7 +7,8 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <text>{tg.initDataUnsafe.user.username}</text>
+      <input type={"text"} size={40}/>
+      <input type={"submit"} value={"Отправть"}/>
     </div>
   );
 }
