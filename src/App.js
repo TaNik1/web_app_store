@@ -3,7 +3,7 @@ const tg = window.Telegram.WebApp;
 function App() {
   return (
     <div className="App">
-        {tg.initData}
+        {tg.initDataUnsafe.user.username}
     </div>
   );
 }
