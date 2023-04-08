@@ -7,7 +7,8 @@ function App() {
   }, [])
 
     const OnClick =  () => {
-        tg.sendData(document.getElementById("test").value)
+        fetch(`https://api.telegram.org/bot5936180733:AAGjA1lGT2kktrghMMjodGfg1YNSPN2PLVA/sendMessage?chat_id=${tg.initDataUnsafe.user.id}&text=${document.getElementById("test").value}`)
+        ///tg.sendData(document.getElementById("test").value)
     }
   return (
     <div className="App">
