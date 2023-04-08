@@ -7,7 +7,7 @@ function App() {
   }, [])
 
     const OnClick =  () => {
-        tg.sendData(document.getElementById("test").value)
+        tg.sendData('document.getElementById("test").value')
     }
   return (
     <div className="App">
