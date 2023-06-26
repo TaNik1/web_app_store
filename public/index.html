@@ -4,29 +4,7 @@
   <meta charset="UTF-8">
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
   <title>Title</title>
-  <script src="https://api-maps.yandex.ru/3.0/?apikey=<bbfb05cf-7a4c-4c04-8d8a-75ca5c2d6d58>&lang=ru_RU"></script>
-  <script>
-    ymaps3.ready.then(init);
-
-    function init() {
-      // Создание карты
-      const map = new ymaps3.YMap(document.getElementById('map'), {
-                location: {
-                  // Координаты центра карты
-                  // Порядок по умолчанию: «долгота, широта»
-                  center: [25.23, 55.29],
-
-                  // Уровень масштабирования
-                  // Допустимые значения: от 0 (весь мир) до 21.
-                  zoom: 7
-                }
-              }
-      );
-      // Добавляем слой для отображения схематической карты
-      map.addChild(new ymaps3.YMapDefaultSchemeLayer());
-    }
-
-  </script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=bbfb05cf-7a4c-4c04-8d8a-75ca5c2d6d58&lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
 <header>
