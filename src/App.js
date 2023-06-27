@@ -2,7 +2,6 @@ import React, {useEffect} from "react";
 import './App.css';
 import Category from "./Category/Category";
 import CategoryList from "./CategoryList/CategoryList";
-import YandexMap from "./YandexMap/YandexMap";
 const tg = window.Telegram.WebApp;
 function App() {
 
@@ -11,7 +10,7 @@ function App() {
     }, [])
     return (
         <div className="App">
-            <YandexMap />
+            <CategoryList />
         </div>
     );
 }
