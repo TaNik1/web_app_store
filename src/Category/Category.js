@@ -1,19 +1,13 @@
 import React from 'react';
 import './Category.css';
 
-const Category = ({product, img, onAdd}) => {
-
-    function op(){
-        return (
-            <div>хуй</div>
-        )
-    }
+const Category = ({product, className, onAdd}) => {
 
     return (
-        <button className={"product"} onClick={op}>
-            <h2 className={'title'}>{product.title}</h2>
-            <img className={"img"} src={product.img} alt={""}/>
-        </button>
+        <div className={'product ' + className}>
+            <div className={'title'}>{product.title}</div>
+            <div className={'img'}/>
+        </div>
     );
 };
 
