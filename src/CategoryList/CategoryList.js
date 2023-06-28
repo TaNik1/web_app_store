@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './CategoryList.css';
 import Category from "../Category/Category";
 
@@ -10,14 +10,20 @@ const categories = [
 ]
 
 
-const CategoryList = () => {
-
-
+const CategoryList = ({onAdd}) => {
+    const [name, setName] = useState('')
+    const [page, setPage] = useState(0)
+    const handleNameChange = (name, page) => {
+        setName(name)
+        setPage(page)
+    }
+    onAdd(name, page)
     return (
         <div className={'list'}>
             {categories.map(item => (
                 <Category
                     product={item}
+                    onChange={handleNameChange}
                 />
             ))}
         </div>

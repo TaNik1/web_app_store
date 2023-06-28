@@ -1,19 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Category.css';
+import Product from "../Product/Product";
+const Category = ({product, onChange}) => {
 
-const Category = ({product, img, onAdd}) => {
-
-    function op(){
-        return (
-            <div>хуй</div>
-        )
-    }
+    const handleClick = (name) => {
+       onChange(name, 1)
+    };
 
     return (
-        <button className={"product"} onClick={op}>
+        <a className={"product"} onClick={()=> handleClick(product.title)}>
             <h2 className={'title'}>{product.title}</h2>
             <img className={"img"} src={product.img} alt={""}/>
-        </button>
+        </a>
     );
 };
 

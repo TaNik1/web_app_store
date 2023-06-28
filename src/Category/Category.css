@@ -1,5 +1,4 @@
 .product {
-    border: none;
     border-radius: 10px;
     width: 100%;
     height: 20vh;
@@ -10,7 +9,14 @@
     position: relative;
     margin-bottom: 1em;
     padding-top: 0;
+    text-decoration: none;
+    color: black;
 }
+
+.product:active {
+    color: red;
+}
+
 
 .img {
     position: absolute;
