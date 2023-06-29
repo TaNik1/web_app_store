@@ -1,0 +1,12 @@
+.row {
+    display: flex;
+}
+
+.list1,
+.list2 {
+    flex: 50%;
+}
+
+.list1{
+    margin-right: 5vh;
+}

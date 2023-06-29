@@ -3,6 +3,8 @@ import './App.css';
 import Category from "./Category/Category";
 import CategoryList from "./CategoryList/CategoryList";
 import Product from "./Product/Product";
+import ProductList from "./ProductList/ProductList";
+import Header from "./Header/Header";
 
 const tg = window.Telegram.WebApp;
 const NameProduct = React.createContext(undefined)
@@ -21,13 +23,15 @@ function App() {
     if (page === 0) {
         return (
             <div className="App">
+                <Header onAdd={handleNameChange}/>
                 <CategoryList onAdd={handleNameChange}/>
             </div>
         );
     } else if (page === 1){
         return (
             <div className="App">
-                <Product product={name}/>
+                <Header onAdd={handleNameChange}/>
+                <ProductList product={name}/>
             </div>
         );
     }
