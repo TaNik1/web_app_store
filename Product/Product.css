@@ -1,0 +1,30 @@
+.product_type {
+    border-radius: 20px;
+    width: 100%;
+    display: flex;
+    background: #FFFFFF;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+.dd{
+    font-family: 'Montserrat', serif;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 5vh;
+    margin-top: 1vh;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 1.2em;
+}
+
+.img_type{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
