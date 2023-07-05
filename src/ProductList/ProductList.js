@@ -1,33 +1,49 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './ProductList.css';
 import Product from "../Product/Product";
 
-const categories = [
-    1, 2, 3, 4, 5, 6, 7, 8, 9, 0
-]
 
 
 const ProductList = ({product, onAdd}) => {
+
+    const [manufacturers, setManufacturers] = useState([])
+
+    const getManufacturers = async () => {
+        const response = await fetch(`https://e90a-46-48-38-58.eu.ngrok.io/manufacturers/${product}`).then((response) => response.json())
+        setManufacturers(response)
+    }
+
+    useEffect(() => {
+        getManufacturers()
+    }, [])
+
     return (
-        <div className={'row'}>
-            <div className={'list1'}>
-                {categories.slice(0, ~~((categories.length + 1) / 2)).map(item1 => (
-                    <Product
-                        className={item1}
-                        product={product}
-                    />
-                ))}
+        <div>
+            <div className={"bar"}>
+                <div className={"button-bar"}><h2>kkk</h2></div>
             </div>
-            <div className={'list2'}>
-                {categories.slice(~~((categories.length + 1) / 2), categories.length).map(item1 => (
-                    <Product
-                        className={item1}
-                        product={product}
-                    />
-                ))}
+            <hr className={"line"}/>
+            <div className={'row'}>
+                <div className={'list1'}>
+                    {manufacturers.slice(0, ~~((manufacturers.length + 1) / 2)).map(item1 => (
+                        <Product
+                            className={item1}
+                            product={item1}
+                        />
+                    ))}
+                </div>
+                <div className={'list2'}>
+                    {manufacturers.slice(~~((manufacturers.length + 1) / 2), manufacturers.length).map(item1 => (
+                        <Product
+                            className={item1}
+                            product={item1}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
-    );
+    )
+        ;
 };
 
 export default ProductList;

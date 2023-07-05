@@ -10,3 +10,26 @@
 .list1{
     margin-right: 5vh;
 }
+
+.line{
+    width: 100%;
+
+}
+.bar{
+    display: flex;
+    padding-bottom: 0.5em;
+    width: 100%;
+}
+
+.button-bar{
+    border: 0.1em solid white;
+    border-radius: 20px;
+    width: 35%;
+    height: 5vh;
+    text-align: center;
+    position: relative;
+}
+
+.button-bar.h2{
+    position: absolute;
+}

@@ -1,18 +1,24 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './CategoryList.css';
 import Category from "../Category/Category";
 
-const categories = [
-    {id: '1', title: 'Жижи', img: '/images/product/7.png'},
-    {id: '2', title: 'Одноразки', img: '/images/product/8.png'},
-    {id: '3', title: 'Снюс', img: '/images/product/9.png'},
-    {id: '4', title: 'Допы', img: '/images/product/est.jpg'},
-]
 
+const categories = [{id: "1", title: "ывывв", img: '/images/product/7.png'}]
 
 const CategoryList = ({onAdd}) => {
     const [name, setName] = useState('')
     const [page, setPage] = useState(0)
+    const [categories, setCategories] = useState([])
+
+    const getCategories = async () => {
+        const response = await fetch('https://e90a-46-48-38-58.eu.ngrok.io/categories').then((response) => response.json())
+        setCategories(response)
+    }
+
+    useEffect(() => {
+        getCategories()
+    }, [])
+
     const handleNameChange = (name, page) => {
         setName(name)
         setPage(page)
