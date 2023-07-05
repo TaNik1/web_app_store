@@ -1,0 +1,8 @@
+
+body{
+    padding: 1em;
+    background: -webkit-linear-gradient(45deg, rgb(150, 9, 249), rgb(81, 10, 66));
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
